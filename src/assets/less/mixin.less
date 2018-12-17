@@ -1,0 +1,25 @@
+.border-1px{
+    border-bottom-style: solid;
+    border-bottom-color: rgb(7,17,27,0.1);
+    border-width: 1px;
+}
+@bg2x: "@2x.png";
+@bg2x: "@3x.png";
+
+.bg-img(@name){
+    background-repeat: no-repeat;
+    background-size:100% 100% ;
+    background-image: url("@{name}@{bg2x}") ;
+}
+@media screen and (-webkit-min-device-pixel-ratio:2){
+    .border-1px{ border-width: 0.5px;}
+    .bg-img(@name){
+          background-image:url(@{name}@{bg2x}) ;
+    }
+}
+@media screen and (-webkit-min-device-pixel-ratio:3){
+    .border-1px{ border-width: 0.33333px;}
+     .bg-img(@name){
+          background-image:url(@{name}@{bg3x}) ;
+    }
+}
