@@ -1,6 +1,6 @@
 # sell
 
-> 饿了吗 APP
+> 吃惑 APP
 
 ## Build Setup
 
